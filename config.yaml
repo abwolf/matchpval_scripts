@@ -1,0 +1,48 @@
+# Database generation parameters
+window_size: "50000"
+window_step_size: "10000"
+# Must be one of: `derived_in_archaic` or `derived_in_archaic_or_modern`
+informative_site_method: "derived_in_archaic"
+
+# Use windows from the database that have informative site counts within RANGE
+# of the query windows informative site count to determine the null
+# distribution. If value is a float, it is multiplied by the count to
+#determine the range.
+informative_site_range: "0"
+
+null_dataset:
+    name: "migration_null_10k"
+    # Other null file paths are assumed to be sudirectories
+    directory: "data/model/null"
+
+    # Specify pattern as shown for snakemake's `glob_wildcards` function:
+    # https://snakemake.readthedocs.io/en/stable/project_info/faq.html#glob-wildcards
+    vcf_file_pattern: "vcfs/{sample}.mod.vcf.gz"
+    chrom_sizes: "1000000"
+    population_file: "Tenn.popfile"
+    archaic_populations:
+        - "Neand1"
+    modern_populations:
+        - "AFR"
+        - "EUR"
+
+test_dataset:
+    name: "0.05_pct"
+    # Other null file paths are assumed to be sudirectories
+    directory: "data/model/0.05_pct"
+
+    # Specify pattern as shown for snakemake's `glob_wildcards` function:
+    # https://snakemake.readthedocs.io/en/stable/project_info/faq.html#glob-wildcards
+    vcf_file_pattern: "vcfs/{sample}.mod.vcf.gz"
+    chrom_sizes: "1000000"
+    population_file: "Tenn.popfile"
+    archaic_populations:
+        - "Neand1"
+    modern_populations:
+        - "AFR"
+        - "EUR"
+    # Introgressed Regions
+    regions_bed_pattern: "TreeCalls/Tenn_nonAfr_{id}_n1_0.05_n2_0.0.bed.merged.gz"
+    haplotype_to_sample_map: "Tenn_haplotype_to_sample.txt"
+    regions_bed_combined: "TreeCalls/Tenn_nonAfr_ALL_n1_0.05_n2_0.0.bed.gz"
+

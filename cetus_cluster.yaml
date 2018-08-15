@@ -1,0 +1,9 @@
+__default__:
+    "n": 1
+    "memory": 2000
+    "qos": "1hr"
+
+build_db:
+    "n": 1
+    "memory": 8000
+    "qos": "1day"

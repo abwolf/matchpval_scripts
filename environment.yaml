@@ -1,0 +1,12 @@
+channels:
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - snakemake>=5.2.1
+    - drmaa>=0.7.8
+    - scikit-allel>=1.1.10
+    - sqlite>=3.20.1
+    - tabix>=0.2.5
+    - pip:
+        - git+https://github.com/lparsons/archaic_match

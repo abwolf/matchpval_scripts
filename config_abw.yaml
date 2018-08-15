@@ -1,0 +1,35 @@
+output_directory: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/match_pvalue"
+window_size: "50000"
+window_step_size: "10000"
+informative_site_method: "derived_in_archaic"
+informative_site_range: "0"
+
+null_dataset:
+    name: "null"
+    # VCF Info
+    vcf_file_pattern: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/null/vcfs/{sample}.mod.vcf.gz"
+    chrom_sizes: "10000000"
+    # Population info
+    population_file: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/null/Tenn.popfile"
+    archaic_populations:
+        - "Neand1"
+    modern_populations:
+        - "ASN"
+        - "EUR"
+
+test_dataset:
+    name: "0.05_pct"
+    # VCF Info
+    vcf_file_pattern: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample//0.05_pct/vcfs/{sample}.mod.vcf.gz"
+    chrom_sizes: "10000000"
+    # Population info
+    population_file: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/0.05_pct/Tenn.popfile"
+    archaic_populations:
+        - "Neand1"
+    modern_populations:
+        - "ASN"
+        - "EUR"
+    # Introgressed Regions
+#    regions_bed_pattern: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/0.05_pct/TreeCalls/Tenn_nonAfr_{id}_n1_0.05_n2_0.0.bed.merged.gz"
+#    haplotype_to_sample_map: "data/Tenn_haplotype_to_sample.txt"
+#    regions_bed_combined: "output/migration_simulations/TreeCalls/Tenn_nonAfr_ALL_n1_0.05_n2_0.0.bed"

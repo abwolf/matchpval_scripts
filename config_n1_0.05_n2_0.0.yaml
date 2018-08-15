@@ -1,0 +1,33 @@
+
+ window_size: "50000"
+ window_step_size: "10000"
+ informative_site_method: "derived_in_archaic"
+ informative_site_range: "0"
+
+ null_dataset:
+     name: "null"
+     directory: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/Tenn/null"
+     # VCF Info
+     vcf_file_pattern: "vcfs/{sample}.mod.vcf.gz"
+     chrom_sizes: "10000000"
+     # Population info
+     population_file: "Tenn.popfile"
+     archaic_populations:
+         - "Neand1"
+     modern_populations:
+         - "ASN"
+         - "EUR"
+
+ test_dataset:
+     name: "Tenn_n1_0.05_n2_0.0"
+     directory: "/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample/Tenn/n1_0.05_n2_0.0"
+     # VCF Info
+     vcf_file_pattern: "vcfs/{sample}.mod.vcf.gz"
+     chrom_sizes: "10000000"
+     # Population info
+     population_file: "Tenn.popfile"
+     archaic_populations:
+         - "Neand1"
+     modern_populations:
+         - "ASN"
+         - "EUR"

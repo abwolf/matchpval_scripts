@@ -1,0 +1,11 @@
+---
+name: Pvalue Match
+description: Calculate pvalue match tables for use with SStar
+contact: abwolf@princeton.edu
+pi: Josh Akey <jakey@princeton.edu>
+lsi_staff: Lance Parsons <lparsons@princeton.edu>
+start_date: 2018-03-16
+completion_date: ""
+repository: https://bitbucket.org/ACCOUNT/PROJECT
+hostname: genomics.princeton.edu
+documentation: README.md
