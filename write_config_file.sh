@@ -1,8 +1,8 @@
 
 mdl=$( echo Tenn )
-data_dir=/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/test/multi_sample
-admix=$( echo n1_0.05_n2_0.0 )
-chromsize=$( echo 10000000)
+data_dir=/Genomics/akeylab/abwolf/SimulatedDemographic/Sstar/chr1_variable_ref/simulations
+admix=$( echo $1 )
+chromsize=$( echo 1000000)
 configfile=$( echo config_$admix.yaml)
 
 echo '
@@ -22,8 +22,8 @@ echo '
      archaic_populations:
          - "Neand1"
      modern_populations:
-         - "ASN"
          - "EUR"
+         - "ASN"
 
  test_dataset:
      name: "'$mdl'_'$admix'"
@@ -36,7 +36,7 @@ echo '
      archaic_populations:
          - "Neand1"
      modern_populations:
-         - "ASN"
          - "EUR"
+         - "ASN"
 ' \
 > $configfile
