@@ -1,6 +1,6 @@
 # Snakefile to generate max match percent for population
 
-# configfile: "config.yaml"
+#configfile: "/Genomics/grid/users/abwolf/SimulatedDemographic/MatchPvalue/bin/config_ABC_test.yaml"
 
 null_archaic_pops_str = "_".join(config["null_dataset"]["archaic_populations"])
 null_modern_pops_str = "_".join(config["null_dataset"]["modern_populations"])
